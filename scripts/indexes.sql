@@ -1,0 +1,25 @@
+use MobileBank
+--DROP INDEX idx_LastName ON client;
+--DROP INDEX idx_FirstName;
+--DROP INDEX idx_Gender;
+--DROP INDEX idx_bank_card_number;
+--DROP INDEX idx_bank_card_type;
+--DROP INDEX idx_transaction_type;
+--DROP INDEX idx_transaction_number;
+--DROP INDEX idx_credit_total_sum;
+--DROP INDEX idx_credit_date;
+--DROP INDEX idx_serviceName;
+--DROP INDEX idx_serviceType;
+--DROP INDEX idx_personal_account;
+CREATE INDEX idx_LastName ON client(client_last_name);
+CREATE INDEX idx_FirstName ON client(client_first_name);
+CREATE INDEX idx_Gender ON client(client_gender);
+CREATE INDEX idx_bank_card_number ON bank_card(bank_card_number);
+CREATE INDEX idx_bank_card_type ON bank_card (bank_card_type);
+CREATE INDEX idx_transaction_type ON transactions (transaction_type);
+CREATE INDEX idx_transaction_number ON transactions (transaction_number);
+CREATE INDEX idx_credit_total_sum ON credits (credit_total_sum);
+CREATE INDEX idx_credit_date ON credits (credit_date);
+CREATE INDEX idx_serviceName ON clientServices(serviceName);
+CREATE INDEX idx_serviceType ON clientServices (serviceType);
+CREATE INDEX idx_personal_account ON clientPersonalAccount(personal_account);
